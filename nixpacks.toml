@@ -1,5 +1,5 @@
 [phases.build]
-cmds = ["echo 'Skipping standard build, using Ollama core binary instead'"]
+cmds = ["echo 'Skipping standard build, installing Ollama binary directly'"]
 
 [start]
-cmd = "curl -L https://ollama.com -o ollama.tgz && tar -C /usr -xzf ollama.tgz && ollama serve"
+cmd = "curl -L https://ollama.com -o ollama.tgz && tar -C /usr/local -xzf ollama.tgz && OLLAMA_HOST=0.0.0.0:11434 ollama serve"
