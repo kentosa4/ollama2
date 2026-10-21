@@ -2,4 +2,4 @@
 cmds = ["echo 'Skipping standard build, installing Ollama binary directly'"]
 
 [start]
-cmd = "curl -L https://ollama.com -o ollama.tgz && tar -C /usr/local -xzf ollama.tgz && OLLAMA_HOST=0.0.0.0:11434 ollama serve"
+cmd = "curl -L https://ollama.com -o /usr/local/bin/ollama && chmod +x /usr/local/bin/ollama && OLLAMA_HOST=0.0.0.0:11434 ollama serve"
