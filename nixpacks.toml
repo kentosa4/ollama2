@@ -1,0 +1,5 @@
+[phases.build]
+cmds = ["echo 'Skipping standard build, using Ollama core binary instead'"]
+
+[start]
+cmd = "curl -L https://ollama.com -o ollama.tgz && tar -C /usr -xzf ollama.tgz && ollama serve"
